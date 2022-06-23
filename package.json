@@ -1,0 +1,30 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client": "npm start --prefix frontend",
+    "server": "npm run start-dev --prefix backend",
+    "watch": "concurrently --kill-others-on-fail \"npm run server\" \" npm run client\"",
+    "deploy": "npm install --prefix frontend && npm run build --prefix frontend && npm install --prefix server",
+    "start": "npm run start --prefix backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RummanH/ecommerce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RummanH/ecommerce/issues"
+  },
+  "homepage": "https://github.com/RummanH/ecommerce#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "eslint": "^8.18.0",
+    "eslint-plugin-react": "^7.30.0"
+  }
+}
